@@ -27,4 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (stored.getItem('cartProducts') == null){
 		stored.setItem('cartProducts', JSON.stringify([]))
   }
+  var cartProducts = JSON.parse(stored.getItem('cartProducts'));
+  cartCount.textContent = cartProducts.length;
+
 });
